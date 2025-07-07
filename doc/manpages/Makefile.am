@@ -812,6 +812,7 @@ APIMANS += gnutls_record_discard_queued.3
 APIMANS += gnutls_record_get_direction.3
 APIMANS += gnutls_record_get_discarded.3
 APIMANS += gnutls_record_get_max_early_data_size.3
+APIMANS += gnutls_record_get_max_send_size.3
 APIMANS += gnutls_record_get_max_size.3
 APIMANS += gnutls_record_get_state.3
 APIMANS += gnutls_record_overhead_size.3
