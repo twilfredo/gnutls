@@ -786,6 +786,7 @@ gnutls_record_set_max_size@GNUTLS_3_4
 gnutls_record_set_state@GNUTLS_3_4
 gnutls_record_set_timeout@GNUTLS_3_4
 gnutls_record_uncork@GNUTLS_3_4
+gnutls_record_get_record_size_limit@GNUTLS_3_8_11
 gnutls_register_custom_url@GNUTLS_3_4
 gnutls_rehandshake@GNUTLS_3_4
 gnutls_rnd@GNUTLS_3_4

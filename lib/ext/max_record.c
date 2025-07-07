@@ -307,3 +307,24 @@ ssize_t gnutls_record_set_max_recv_size(gnutls_session_t session, size_t size)
 
 	return 0;
 }
+
+/**
+ * gnutls_record_get_record_size_limit:
+ * @session: is a #gnutls_session_t type.
+ *
+ * Get the max record send size. The maximum record send size is
+ * advertised by the server during a handshake.
+ *
+ * Returns: On success, the negotiated record size limit,
+ *   If the server record size limit is not specified an error
+ *   is returned.
+ *
+ * Since: 3.8.10
+ **/
+ssize_t gnutls_record_get_record_size_limit(gnutls_session_t session)
+{
+	if (!(session->internals.hsk_flags & HSK_RECORD_SIZE_LIMIT_NEGOTIATED))
+		return gnutls_assert_val(GNUTLS_E_INVALID_REQUEST);
+
+	return max_record_send_size(session);
+}
