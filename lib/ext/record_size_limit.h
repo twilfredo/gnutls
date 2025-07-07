@@ -27,4 +27,6 @@
 
 extern const hello_ext_entry_st ext_mod_record_size_limit;
 
+int gnutls_record_get_record_size_limit(gnutls_session_t session, size_t *size);
+
 #endif /* GNUTLS_LIB_EXT_RECORD_SIZE_LIMIT_H */

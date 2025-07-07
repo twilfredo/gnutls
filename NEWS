@@ -24,6 +24,9 @@ See the end for copying conditions.
 ** libgnutls: TLS certificate compression methods can now be set with
    cert-compression-alg configuration option in the gnutls priority file.
 
+** libgnutls: Expose a function to provide the max_record_send_size as
+   negotiated during a handshake.
+
 ** libgnutls: All variants of ML-DSA private key formats are supported
    While the previous implementation of ML-DSA was based on
    draft-ietf-lamps-dilithium-certificates-04, this updates it to
