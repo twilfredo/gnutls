@@ -57,6 +57,8 @@ gnutls_psk_allocate_server_credentials2: New function
 ** libgnutls: TLS certificate compression methods can now be set with
    cert-compression-alg configuration option in the gnutls priority file.
 
+** libgnutls: Expose a new function to provide the maximum record send size.
+
 ** libgnutls: All variants of ML-DSA private key formats are supported
    While the previous implementation of ML-DSA was based on
    draft-ietf-lamps-dilithium-certificates-04, this updates it to
@@ -106,6 +108,7 @@ GNUTLS_PK_MLDSA87: New enum member of gnutls_pk_algorithm_t
 GNUTLS_SIGN_MLDSA44: New enum member of gnutls_sign_algorithm_t
 GNUTLS_SIGN_MLDSA65: New enum member of gnutls_sign_algorithm_t
 GNUTLS_SIGN_MLDSA87: New enum member of gnutls_sign_algorithm_t
+gnutls_record_get_max_send_size: New function
 
 * Version 3.8.8 (released 2024-11-05)
 
