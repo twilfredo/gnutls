@@ -1450,6 +1450,15 @@ GNUTLS_3_8_6
 	*;
 } GNUTLS_3_8_4;
 
+GNUTLS_3_8_10
+{
+ global:
+        gnutls_record_get_record_size_limit;
+ local:
+        *;
+} GNUTLS_3_8_6;
+
+
 GNUTLS_FIPS140_3_4 {
   global:
 	gnutls_cipher_self_test;

@@ -830,6 +830,7 @@ APIMANS += gnutls_record_set_max_size.3
 APIMANS += gnutls_record_set_state.3
 APIMANS += gnutls_record_set_timeout.3
 APIMANS += gnutls_record_uncork.3
+APIMANS += gnutls_record_get_record_size_limit.3
 APIMANS += gnutls_register_custom_url.3
 APIMANS += gnutls_rehandshake.3
 APIMANS += gnutls_rnd.3
