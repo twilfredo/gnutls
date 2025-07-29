@@ -59,9 +59,14 @@ static int _gnutls_dumbfw_send_params(gnutls_session_t session,
 	unsigned pad_size;
 	ssize_t len = extdata->length - sizeof(mbuffer_st);
 
+	_gnutls_handshake_log("wmk: _gnutls_dumbfw_send_params");
+
+	_gnutls_handshake_log("wmk: dumbfw: %d | DTLS: %d", session->internals.dumbfw, IS_DTLS(session));
+	_gnutls_handshake_log("wmk: %ld", len);
+
 	if (session->security_parameters.entity == GNUTLS_SERVER ||
-	    session->internals.dumbfw == 0 || IS_DTLS(session) != 0 ||
-	    (len < 256 || len >= 512)) {
+	    IS_DTLS(session) != 0 || (len < 256 || len >= 512)) {
+		_gnutls_handshake_log("wmk: no padding!");
 		return 0;
 	} else {
 		/* 256 <= extdata->length < 512 */
@@ -71,8 +76,8 @@ static int _gnutls_dumbfw_send_params(gnutls_session_t session,
 		ret = gnutls_buffer_append_data(extdata, pad, pad_size);
 		if (ret < 0)
 			return gnutls_assert_val(ret);
-
 		total_size += pad_size;
+		_gnutls_handshake_log("wmk: len: %ld | psize: %d | tsize: %d", len, pad_size, total_size);
 	}
 
 	return total_size;
