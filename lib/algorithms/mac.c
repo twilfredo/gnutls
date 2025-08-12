@@ -204,6 +204,7 @@ static SYSTEM_CONFIG_OR_CONST mac_entry_st hash_algorithms[] = {
 	  .key_size = 32,
 	  .block_size = 16 },
 	{ .name = "PBMAC1", .id = GNUTLS_MAC_PBMAC1, .placeholder = 1 },
+	{ .name = "MAC-UNKNOWN", .id = GNUTLS_MAC_UNKNOWN },
 	{ .name = "MAC-NULL", .id = GNUTLS_MAC_NULL },
 	{ 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 };
